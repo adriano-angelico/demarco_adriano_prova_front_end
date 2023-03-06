@@ -1,0 +1,31 @@
+<!-- customers.component -->
+<h1 mat-dialog-title class="bg-sky-500 !text-slate-50">{{ 'DIALOGS.DIALOG_HEADER_DETAILS' | translate }}</h1>
+
+<div *ngIf="customerDetails$ | async as details">
+  <div mat-dialog-content>
+    <p><b>{{ 'CUSTOMER_LABELS.LABELS.ID' | translate }}:</b> {{ details.id }}</p>
+    <p><b>{{ 'CUSTOMER_LABELS.LABELS.NAME' | translate }}:</b> {{ details.name }}</p>
+    <p><b>{{ 'CUSTOMER_LABELS.LABELS.AGE' | translate }}:</b> {{ details.age }}</p>
+    <p><b>{{ 'CUSTOMER_LABELS.LABELS.CITY' | translate }}:</b> {{ details.city }}</p>
+
+    <div *ngIf="customerOrders$ | async as orders" class="bg-slate-50 border rounded-md py-4 px-8">
+      <!-- <pre>{{ orders | json }}</pre> -->
+
+      <h2>{{ 'CUSTOMER_LABELS.LABELS.ORDERS' | translate }}</h2>
+
+      <p><b>{{ 'CUSTOMER_LABELS.LABELS.ID' | translate }}:</b> {{ orders.id }}</p>
+      <p><b>{{ 'CUSTOMER_LABELS.LABELS.TOTAL' | translate }}:</b> {{ orders.total | currency }}</p>
+      <p><b>{{ 'CUSTOMER_LABELS.LABELS.CUSTOMER_ID' | translate }}:</b> {{ orders.customerId }}</p>
+
+      <ul *ngFor="let item of orders.items" class="mb-4">
+        <li><b>{{ 'CUSTOMER_LABELS.LABELS.ITEM' | translate }}:</b> {{ item.item }}</li>
+        <li><b>{{ 'CUSTOMER_LABELS.LABELS.VALUE' | translate }}:</b> {{ item.value | currency }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <mat-dialog-actions align="end" class="bg-slate-100">
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>{{ 'DIALOG_ACTIONS_BUTTONS.CLOSE' | translate }}</button>
+  </mat-dialog-actions>
+</div>
+<!-- /customers.component -->

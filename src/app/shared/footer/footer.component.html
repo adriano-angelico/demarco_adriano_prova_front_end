@@ -1,0 +1,10 @@
+<!-- footer.component -->
+<footer class="bg-gray-300 h-full">
+  <div class="container h-full mx-auto flex justify-end items-center">
+    <mat-button-toggle-group [(ngModel)]="language" name="change-languate" aria-label="Change language" matTooltip="{{ 'TOOLTIPS.LANGUAGE' | translate }}">
+      <mat-button-toggle value="en" (click)="setLanguage(language)" checked>EN</mat-button-toggle>
+      <mat-button-toggle value="pt-br" (click)="setLanguage(language)">PT</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+</footer>
+<!-- /footer.component -->

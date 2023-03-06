@@ -1,0 +1,57 @@
+/* global styles */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --light-color: #fafafa;
+  --dark-color: #333;
+
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  font-size: 1.6rem;
+  height: 100vh;
+}
+
+body * {
+  font-family: Roboto, sans-serif;
+}
+
+body app-root {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: 100px 1fr 80px;
+  height: 100vh;
+}
+
+a,
+a:visited,
+a:hover {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #125699;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

@@ -1,0 +1,53 @@
+{
+  "LANGUAGE_CODE": "en",
+  "MAIN_TITLE": "Customer",
+  "INPUT_SEARCH": {
+    "INPUT_SEARCH_LABEL": "Search",
+    "INPUT_SEARCH_PLACEHOLDER": "Type your search!"
+  },
+  "ADD_NEW_CUSTOMER_BUTTON": "Add new customer",
+  "CUSTOMER_LABELS": {
+    "LABELS": {
+      "ID": "ID",
+      "NAME": "Name",
+      "NAME_SURNAME": "Name and Surname",
+      "AGE": "Age",
+      "CITY": "City",
+      "ACTIONS": "Actions",
+      "ORDERS": "Orders",
+      "TOTAL": "Total",
+      "CUSTOMER_ID": "Customer ID",
+      "ITEM": "Item",
+      "VALUE": "Value"
+    }
+  },
+  "TOOLTIPS": {
+    "LANGUAGE": "Change language",
+    "DETAILS": "Details",
+    "EDIT": "Edit",
+    "DELETE": "Delete"
+  },
+  "DIALOG_MESSAGE_DELETE": "Do you want to delete the customer?",
+  "DIALOG_ACTIONS_BUTTONS": {
+    "CLOSE": "Close",
+    "CANCEL": "Cancel",
+    "SAVE": "Save",
+    "DELETE": "Delete"
+  },
+  "DIALOGS": {
+    "DIALOG_HEADER_ADD": "Add new customer",
+    "DIALOG_HEADER_DETAILS": "Customer details",
+    "DIALOG_HEADER_UPDATE": "Update customer",
+    "DIALOG_HEADER_DELETE": "Delete customer"
+  },
+  "PAGINATOR": {
+    "MAT_PAGINATOR": {
+      "FIRST_PAGE": "First page",
+      "ITEMS_PER_PAGE": "Items per page",
+      "LAST_PAGE": "Last page",
+      "NEXT_PAGE": "Next page",
+      "PREVIOUS_PAGE": "Previous page",
+      "OF": "of"
+    }
+  }
+}

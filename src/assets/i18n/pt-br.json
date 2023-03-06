@@ -1,0 +1,53 @@
+{
+  "LANGUAGE_CODE": "pt-BR",
+  "MAIN_TITLE": "Clientes",
+  "INPUT_SEARCH": {
+    "INPUT_SEARCH_LABEL": "Pesquisar",
+    "INPUT_SEARCH_PLACEHOLDER": "Digite sua busca!"
+  },
+  "ADD_NEW_CUSTOMER_BUTTON": "Adicionar novo cliente",
+  "CUSTOMER_LABELS": {
+    "LABELS": {
+      "ID": "ID",
+      "NAME": "Nome",
+      "NAME_SURNAME": "Nome e Sobrenome",
+      "AGE": "Idade",
+      "CITY": "Cidade",
+      "ACTIONS": "Ações",
+      "ORDERS": "Pedidos",
+      "TOTAL": "Total",
+      "CUSTOMER_ID": "ID do Cliente",
+      "ITEM": "Item",
+      "VALUE": "Valor"
+    }
+  },
+  "TOOLTIPS": {
+    "LANGUAGE": "Trocar idioma",
+    "DETAILS": "Detalhes",
+    "EDIT": "Editar",
+    "DELETE": "Excluir"
+  },
+  "DIALOG_MESSAGE_DELETE": "Você quer excluir o cliente?",
+  "DIALOG_ACTIONS_BUTTONS": {
+    "CLOSE": "Fechar",
+    "CANCEL": "Cancelar",
+    "SAVE": "Salvar",
+    "DELETE": "Excluir"
+  },
+  "DIALOGS": {
+    "DIALOG_HEADER_ADD": "Adicionar novo cliente",
+    "DIALOG_HEADER_DETAILS": "Detalhes do cliente",
+    "DIALOG_HEADER_UPDATE": "Alterar cliente",
+    "DIALOG_HEADER_DELETE": "Excluir cliente"
+  },
+  "PAGINATOR": {
+    "MAT_PAGINATOR": {
+      "FIRST_PAGE": "Primeira página",
+      "ITEMS_PER_PAGE": "Itens por página",
+      "LAST_PAGE": "Última página",
+      "NEXT_PAGE": "Próxima página",
+      "PREVIOUS_PAGE": "Página anterior",
+      "OF": "de"
+    }
+  }
+}

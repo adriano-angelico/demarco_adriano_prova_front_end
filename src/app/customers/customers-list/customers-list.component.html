@@ -1,0 +1,71 @@
+<!-- customers-list.component -->
+<h1>{{ 'MAIN_TITLE' | translate }}</h1>
+
+<div class="flex justify-between">
+  <mat-form-field class="w-1/3">
+    <mat-label>{{ 'INPUT_SEARCH.INPUT_SEARCH_LABEL' | translate }}</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="{{ 'INPUT_SEARCH.INPUT_SEARCH_PLACEHOLDER' | translate }}" #input>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="openCustomerFormDialog()">
+    <mat-icon aria-hidden="false" aria-label="Add Icon" fontIcon="add"></mat-icon>
+    {{ 'ADD_NEW_CUSTOMER_BUTTON' | translate }}
+  </button>
+</div>
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort>
+
+    <!-- Id Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
+      <td mat-cell *matCellDef="let customer"> {{customer.id}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="name">{{ 'CUSTOMER_LABELS.LABELS.NAME' | translate }}</th>
+      <td mat-cell *matCellDef="let customer"> {{customer.name}} </td>
+    </ng-container>
+
+    <!-- Age Column -->
+    <ng-container matColumnDef="age">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="age">{{ 'CUSTOMER_LABELS.LABELS.AGE' | translate }}</th>
+      <td mat-cell *matCellDef="let customer"> {{customer.age}} </td>
+    </ng-container>
+
+    <!-- City Column -->
+    <ng-container matColumnDef="city">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="city">{{ 'CUSTOMER_LABELS.LABELS.CITY' | translate }}</th>
+      <td mat-cell *matCellDef="let customer"> {{customer.city}} </td>
+    </ng-container>
+
+    <!-- Action Column -->
+    <ng-container matColumnDef="actions">
+      <th class="!text-center" mat-header-cell *matHeaderCellDef>{{ 'CUSTOMER_LABELS.LABELS.ACTIONS' | translate }}</th>
+      <td mat-cell *matCellDef="let customer">
+        <div class="flex items-center justify-center gap-x-8">
+          <mat-icon class="cursor-pointer text-gray-400 hover:text-sky-600 transition duration-300 ease-out" matTooltip="{{ 'TOOLTIPS.DETAILS' | translate }}" matTooltipPosition="above" aria-hidden="false" aria-label="Details Icon" fontIcon="description" (click)="openCustomerDetailsDialog(customer.id)"></mat-icon>
+          <mat-icon class="cursor-pointer text-gray-400 hover:text-green-500 transition duration-300 ease-out" matTooltip="{{ 'TOOLTIPS.EDIT' | translate }}" matTooltipPosition="above" aria-hidden="false" aria-label="Edit Icon" fontIcon="edit" (click)="openCustomerFormDialog(customer.id)"></mat-icon>
+          <mat-icon class="cursor-pointer text-gray-400 hover:text-red-600 transition duration-300 ease-out" matTooltip="{{ 'TOOLTIPS.DELETE' | translate }}" matTooltipPosition="above" aria-hidden="false" aria-label="Delete Icon" fontIcon="delete" (click)="openCustomerDeleteDialog(customer.id)"></mat-icon>
+        </div>
+      </td>
+    </ng-container>
+
+    <tr class="!bg-slate-100" mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr class="hover:!bg-slate-50 transition duration-300 ease-out" mat-row *matRowDef="let customer; columns: displayedColumns;"></tr>
+
+    <!-- Row shown when there is no matching data. -->
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell py-4 px-8" *ngIf="isFilter" colspan="4">No data matching the filter "{{input.value}}"</td>
+    </tr>
+  </table>
+
+  <div *ngIf="isLoading" class="flex justify-center p-8">
+    <mat-progress-spinner color="primary" mode="indeterminate">
+    </mat-progress-spinner>
+  </div>
+
+  <mat-paginator [pageSizeOptions]="[5, 10]" aria-label="Select customers page"></mat-paginator>
+</div>
+<!-- /customers-list.component -->

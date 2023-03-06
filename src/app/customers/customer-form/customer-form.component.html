@@ -1,0 +1,36 @@
+<!-- customers-new.component -->
+<form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+  <h1 mat-dialog-title class="bg-indigo-800 !text-slate-50 !mb-14">{{ (label ? 'DIALOGS.DIALOG_HEADER_ADD' : 'DIALOGS.DIALOG_HEADER_UPDATE') | translate }}</h1>
+
+  <div mat-dialog-content>
+    <mat-form-field class="w-full">
+      <mat-label>{{ 'CUSTOMER_LABELS.LABELS.NAME_SURNAME' | translate }}</mat-label>
+      <input type="text" matInput formControlName="name">
+      <mat-error *ngIf="customerForm.get('name')?.errors && customerForm.get('name')?.touched">
+        {{ 'CUSTOMER_LABELS.LABELS.NAME_SURNAME' | translate }} is required.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="w-full">
+      <mat-label>{{ 'CUSTOMER_LABELS.LABELS.AGE' | translate }}</mat-label>
+      <input type="number" matInput formControlName="age">
+      <mat-error *ngIf="customerForm.get('age')?.errors && customerForm.get('age')?.touched">
+        {{ 'CUSTOMER_LABELS.LABELS.AGE' | translate }} is required.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="w-full">
+      <mat-label>{{ 'CUSTOMER_LABELS.LABELS.CITY' | translate }}</mat-label>
+      <input type="text" matInput formControlName="city">
+      <mat-error *ngIf="customerForm.get('city')?.errors && customerForm.get('city')?.touched">
+        {{ 'CUSTOMER_LABELS.LABELS.CITY' | translate }} is required.
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+  <mat-dialog-actions align="end" class="bg-slate-100">
+    <button mat-button mat-dialog-close>{{ 'DIALOG_ACTIONS_BUTTONS.CANCEL' | translate }}</button>
+    <button type="submit" mat-button [mat-dialog-close]="true" [disabled]="!customerForm.valid">{{ 'DIALOG_ACTIONS_BUTTONS.SAVE' | translate }}</button>
+  </mat-dialog-actions>
+</form>
+<!-- /customers-new.component -->
