@@ -50,5 +50,10 @@
       "OF": "of"
     }
   },
-  "REQUIRED": "is required!"
+  "REQUIRED": "is required!",
+  "SNACKBAR_MESSAGE": {
+    "SNACKBAR_MESSAGE_UPDATE": "Customer updated successfully!",
+    "SNACKBAR_MESSAGE_SAVE": "Customer successfully saved!",
+    "SNACKBAR_MESSAGE_DELETE": "Customer deleted successfully!"
+  }
 }

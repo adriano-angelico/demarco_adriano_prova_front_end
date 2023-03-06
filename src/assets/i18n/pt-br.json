@@ -50,5 +50,10 @@
       "OF": "de"
     }
   },
-  "REQUIRED": "é obrigatório!"
+  "REQUIRED": "é obrigatório!",
+  "SNACKBAR_MESSAGE": {
+    "SNACKBAR_MESSAGE_UPDATE": "Cliente alterado com sucesso!",
+    "SNACKBAR_MESSAGE_SAVE": "Cliente adicionado com sucesso!",
+    "SNACKBAR_MESSAGE_DELETE": "Cliente excluído com sucesso!"
+  }
 }

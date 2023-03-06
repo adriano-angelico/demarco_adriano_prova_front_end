@@ -29,18 +29,6 @@
       "name": "João Alves",
       "age": 19,
       "city": "Campo Grande"
-    },
-    {
-      "name": "asdfa",
-      "age": 5454,
-      "city": "asdfasdf",
-      "id": 6
-    },
-    {
-      "name": "asdfa",
-      "age": 3433,
-      "city": "asdfasdfasdfasdfasdf",
-      "id": 7
     }
   ],
   "orders": [

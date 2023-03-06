@@ -39,7 +39,7 @@ export class CustomerDeleteComponent {
           filter((res: { customerId: any }) => res.customerId !== 1236)
         );
 
-        this.openSnackBar('Customer deleted successfully!');
+        this.openSnackBar('SNACKBAR_MESSAGE.SNACKBAR_MESSAGE_DELETE');
       },
       (_error) => {
         this.openSnackBar('Unable to fulfill your request!');

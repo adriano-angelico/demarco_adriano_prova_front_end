@@ -43,12 +43,11 @@ export class CustomerFormComponent {
   onSubmit() {
     if (this.data) {
       if (this.customerForm.valid) {
-        console.log('has data!');
         this.customerService
           .update(this.data, this.customerForm.value)
           .subscribe(
             (_success) => {
-              this.openSnackBar('Client updated successfully!');
+              this.openSnackBar('SNACKBAR_MESSAGE.SNACKBAR_MESSAGE_UPDATE');
             },
             (_error) => {
               this.openSnackBar('Unable to fulfill your request!');
@@ -57,10 +56,9 @@ export class CustomerFormComponent {
       }
     } else {
       if (this.customerForm.valid) {
-        console.log('has no data!');
         this.customerService.create(this.customerForm.value).subscribe(
           (_success) => {
-            this.openSnackBar('Customer successfully saved!');
+            this.openSnackBar('SNACKBAR_MESSAGE.SNACKBAR_MESSAGE_SAVE');
           },
           (_error) => {
             this.openSnackBar('Unable to fulfill your request!');
